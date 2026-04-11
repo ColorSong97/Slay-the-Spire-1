@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpihsk1doskia"]
+
+[ext_resource type="Script" path="res://Scene/main_menu.gd" id="1_fdmrx"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_fdmrx")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 1080.0
+offset_bottom = 720.0
+color = Color(0.120787, 0.256975, 0.368695, 1)
+
+[node name="Title" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Title"]
+offset_left = 564.0
+offset_top = 200.0
+offset_right = 852.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 72
+text = "杀戮尖塔"
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(237, 386)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ContinueButton" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "继续游戏"
+flat = true
+
+[node name="GiveupButton" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "放弃"
+flat = true
+
+[node name="NewgameButton" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "新游戏"
+flat = true
+
+[node name="ExitButton" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "退出"
+flat = true
+
+[connection signal="pressed" from="Buttons/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/GiveupButton" to="." method="_on_giveup_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/NewgameButton" to="." method="_on_newgame_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

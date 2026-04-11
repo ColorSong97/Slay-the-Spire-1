@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1oyasy63mgp2"]
+
+[ext_resource type="Script" path="res://Script/save_manager.gd" id="1_f0gbk"]
+[ext_resource type="Script" path="res://Scene/save_test_node.gd" id="2_ujx3i"]
+
+[node name="Game" type="Node"]
+
+[node name="SaveManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_f0gbk")
+
+[node name="SaveTestNode" type="Node" parent="."]
+script = ExtResource("2_ujx3i")

@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn6v52e06n7p5"]
+
+[ext_resource type="Texture2D" uid="uid://c7m42pcwbs0hy" path="res://Asset/Background1.png" id="1_nv4cq"]
+[ext_resource type="PackedScene" uid="uid://68p02vjtsv0u" path="res://Scene/card_ui/card_ui.tscn" id="2_whe58"]
+[ext_resource type="Script" path="res://Scene/UI/hand.gd" id="2_yavkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmsyh"]
+size = Vector2(1080, 500)
+
+[node name="Battle" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(1080, 720)
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+modulate = Color(0.678944, 0.678944, 0.678944, 1)
+layout_mode = 2
+texture = ExtResource("1_nv4cq")
+metadata/_edit_lock_ = true
+
+[node name="CardDropArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
+position = Vector2(540, 250)
+shape = SubResource("RectangleShape2D_fmsyh")
+
+[node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
+
+[node name="Hand" type="HBoxContainer" parent="BattleUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -378.0
+offset_top = -96.0
+offset_right = 378.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("2_yavkf")
+
+[node name="CardUi" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi2" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi3" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi4" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi5" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi6" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi7" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi8" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi9" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
+
+[node name="CardUi10" parent="BattleUI/Hand" instance=ExtResource("2_whe58")]
+layout_mode = 2
