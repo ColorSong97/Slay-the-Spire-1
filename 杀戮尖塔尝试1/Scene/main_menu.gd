@@ -5,24 +5,31 @@ extends Node2D
 @onready var newgame_button: Button = $Buttons/VBoxContainer/NewgameButton
 @onready var exit_button: Button = $Buttons/VBoxContainer/ExitButton
 
-@onready var save_manager: Node = %SaveManager
+@onready var save_manager: Node
 
 
 
 func _ready() -> void:
 	save_manager = get_node("/root/Game/SaveManager")
 	await save_manager.ready
+	update_visible()
+	pass
+
+func _process(delta: float) -> void:
+	update_visible()
+
+func update_visible() -> void:
 	continue_button.visible = save_manager.has_save_file()
 	giveup_button.visible = save_manager.has_save_file()
-	pass
+
 
 
 #region Button Signals
 
 func _on_continue_button_pressed() -> void:
-	if save_manager.load_game():
+	if save_manager.load_game() == 0:
 		# 加载成功后切换到游戏场景，游戏场景会从 SaveManager.game_data 恢复状态
-		get_tree().change_scene_to_file("res://scenes/in_game_scene.tscn")
+		get_tree().change_scene_to_file("res://Scene/in_game_scene.tscn")
 	else:
 		# 加载失败提示
 		var err_dialog = AcceptDialog.new()
@@ -66,7 +73,7 @@ func _start_new_game():
 	# 重置全局游戏数据（例如通过 Autoload 的 GameState）
 	#GameState.reset_to_default()       # 稍后实现
 	# 切换到游戏场景
-	get_tree().change_scene_to_file("res://scenes/in_game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scene/in_game_scene.tscn")
 
 
 func _on_exit_button_pressed() -> void:

@@ -23,11 +23,17 @@ theme_override_font_sizes/font_size = 72
 text = "杀戮尖塔"
 
 [node name="Buttons" type="Node2D" parent="."]
-position = Vector2(237, 386)
+position = Vector2(237, 566)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
-offset_right = 40.0
-offset_bottom = 40.0
+custom_minimum_size = Vector2(150, 180)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_right = 150.0
+grow_vertical = 0
+alignment = 2
 
 [node name="ContinueButton" type="Button" parent="Buttons/VBoxContainer"]
 layout_mode = 2
