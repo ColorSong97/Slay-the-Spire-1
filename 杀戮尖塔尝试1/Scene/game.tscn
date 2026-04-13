@@ -13,4 +13,3 @@ script = ExtResource("1_f0gbk")
 
 [node name="SaveTestNode" type="Node" parent="."]
 script = ExtResource("2_ujx3i")
-available = false

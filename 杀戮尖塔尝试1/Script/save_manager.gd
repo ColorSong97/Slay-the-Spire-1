@@ -16,7 +16,7 @@ signal game_loaded
 ## 存档文件路径
 const SAVE_PATH := "res://savegame1.json"
 
-var game_data: Dictionary
+var save_data: Dictionary
 
 ## 检查存档文件是否存在
 func has_save_file() -> bool:
@@ -25,13 +25,13 @@ func has_save_file() -> bool:
 ## 保存游戏（由外部调用，例如切换房间、战斗结束时）
 func save_game() -> void:
 	# 清空旧数据，准备重新收集
-	game_data.clear()
+	save_data.clear()
 	
 	# 发出保存请求，让其他模块填充数据
-	game_save.emit(game_data)
+	game_save.emit(save_data)
 	
 	# 将字典写入 JSON 文件
-	var json_str = JSON.stringify(game_data, "\t")
+	var json_str = JSON.stringify(save_data, "\t")
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string(json_str)
@@ -64,10 +64,10 @@ func load_game() -> int:
 		push_error("JSON 解析失败: ", json.get_error_message())
 		return 1
 	
-	game_data = json.data
+	save_data = json.data
 	
 	# 发出加载信号，让其他模块恢复状态
-	game_load.emit(game_data)
+	game_load.emit(save_data)
 	
 	game_loaded.emit()
 	print("游戏加载完成")
@@ -77,7 +77,7 @@ func load_game() -> int:
 func delete_save() -> void:
 	if has_save_file():
 		DirAccess.remove_absolute(SAVE_PATH)
-		game_data.clear()
+		save_data.clear()
 		print("存档已删除")
 
 #func _ready() -> void:

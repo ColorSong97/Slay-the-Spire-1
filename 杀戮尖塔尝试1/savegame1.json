@@ -1,0 +1,238 @@
+{
+	"gameData": {
+		"current_room_id": "",
+		"deck": [],
+		"gold": 0,
+		"health": 80,
+		"map_data": {
+			"current": null,
+			"rooms": [
+				[
+					{
+						"depth": 1,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 2,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 3,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 4,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 5,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 6,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 7,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 8,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 9,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 10,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 11,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 12,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 13,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 14,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 15,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 16,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 17,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 18,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 19,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				],
+				[
+					{
+						"depth": 20,
+						"index": 0,
+						"next_rooms": [
+							0
+						],
+						"prev_rooms": [],
+						"type": 4
+					}
+				]
+			]
+		},
+		"max_health": 80
+	},
+	"player": {
+		"gold": 3,
+		"health": 100
+	}
+}

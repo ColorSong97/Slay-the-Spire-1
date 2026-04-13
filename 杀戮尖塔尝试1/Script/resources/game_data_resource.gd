@@ -10,7 +10,7 @@ var _max_health: int = 80
 var _gold: int = 0
 var _deck: Array[CardResource] = []
 var _current_room_id: String = ""
-var _map_data: MapData = null
+var _map_data: MapData
 
 #endregion
 
@@ -32,7 +32,7 @@ func reset_to_default() -> void:
 	_gold = 0
 	_deck.clear()
 	_current_room_id = ""
-	_map_data = null
+	_map_data = MapData.new()
 	# 可选：添加初始卡牌
 	# _deck.append(load("res://cards/strike.tres"))
 
@@ -128,6 +128,13 @@ func deserialize(data: Dictionary) -> void:
 	health_changed.emit(_health)
 	gold_changed.emit(_gold)
 	deck_changed.emit()
-	map_changed.emit()
+
+
+#region 调试 Debug
+
+func test_print() -> void:
+	#print("game data test")
+	_map_data.test_print()
+	pass
 
 #endregion
