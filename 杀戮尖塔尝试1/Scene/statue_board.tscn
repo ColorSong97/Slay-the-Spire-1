@@ -165,4 +165,6 @@ theme_override_font_sizes/font_size = 30
 text = "菜单"
 flat = true
 
+[connection signal="pressed" from="VBoxContainer/MarginContainer/CheckMap/CheckMapButton" to="." method="_on_check_map_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/CheckDeck/CheckDeckButton" to="." method="_on_check_deck_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/MarginContainer/MenuButton" to="." method="_on_menu_button_pressed"]

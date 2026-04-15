@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var game_node: Node
 @onready var continue_button: Button = $Buttons/VBoxContainer/ContinueButton
 @onready var giveup_button: Button = $Buttons/VBoxContainer/GiveupButton
 @onready var newgame_button: Button = $Buttons/VBoxContainer/NewgameButton
@@ -10,6 +11,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	game_node = get_node("/root/Game")
 	save_manager = get_node("/root/Game/SaveManager")
 	await save_manager.ready
 	update_visible()
@@ -29,7 +31,7 @@ func update_visible() -> void:
 func _on_continue_button_pressed() -> void:
 	if save_manager.load_game() == 0:
 		# 加载成功后切换到游戏场景，游戏场景会从 SaveManager.game_data 恢复状态
-		get_tree().change_scene_to_file("res://Scene/in_game_scene.tscn")
+		game_node.start_game()
 	else:
 		# 加载失败提示
 		var err_dialog = AcceptDialog.new()
@@ -73,7 +75,7 @@ func _start_new_game():
 	# 重置全局游戏数据（例如通过 Autoload 的 GameState）
 	#GameState.reset_to_default()       # 稍后实现
 	# 切换到游戏场景
-	get_tree().change_scene_to_file("res://Scene/in_game_scene.tscn")
+	game_node.start_game()
 
 
 func _on_exit_button_pressed() -> void:

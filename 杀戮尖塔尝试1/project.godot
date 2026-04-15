@@ -23,7 +23,6 @@ Game="*res://Scene/game.tscn"
 
 window/size/viewport_width=1080
 window/size/viewport_height=720
-window/size/resizable=false
 
 [input]
 

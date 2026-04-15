@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfgsf6w5bwan0"]
+
+[ext_resource type="Script" path="res://Scene/UI/room_button.gd" id="1_bcysj"]
+[ext_resource type="Texture2D" uid="uid://br3mdtuq3hl5f" path="res://Asset/choose_circle.png" id="2_cwwof"]
+
+[node name="RoomButton" type="CenterContainer"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bcysj")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "敌人"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_cwwof")
+expand_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

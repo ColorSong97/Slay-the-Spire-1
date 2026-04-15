@@ -5,7 +5,10 @@
 		"gold": 0,
 		"health": 80,
 		"map_data": {
-			"current": null,
+			"current": [
+				1,
+				0
+			],
 			"rooms": [
 				[
 					{

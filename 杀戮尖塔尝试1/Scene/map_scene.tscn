@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b66p2t64nxf2g"]
-
-[ext_resource type="Script" path="res://Scene/map_scene.gd" id="1_1odad"]
-
-[node name="MapScene" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_1odad")

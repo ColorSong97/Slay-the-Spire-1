@@ -1,0 +1,186 @@
+[gd_scene load_steps=3 format=3 uid="uid://b66p2t64nxf2g"]
+
+[ext_resource type="Script" path="res://Scene/map_scene.gd" id="1_1odad"]
+[ext_resource type="PackedScene" uid="uid://cfgsf6w5bwan0" path="res://Scene/UI/room_button.tscn" id="2_ui3nf"]
+
+[node name="MapScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1odad")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="20" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/20" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="19" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/19" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="18" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/18" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="17" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/17" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="16" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/16" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="15" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/15" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="14" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/14" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="13" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/13" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="12" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/12" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="11" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/11" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="10" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/10" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="9" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/9" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="8" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/8" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="7" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/7" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/6" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/5" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/4" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/3" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/2" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true
+
+[node name="1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RoomButton" parent="ScrollContainer/VBoxContainer/1" instance=ExtResource("2_ui3nf")]
+layout_mode = 2
+is_activated = true

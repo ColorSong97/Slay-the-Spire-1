@@ -1,0 +1,149 @@
+[gd_scene load_steps=5 format=3 uid="uid://b66p2t64nxf2g"]
+
+[ext_resource type="Script" path="res://Scene/map/map_scene.gd" id="1_1odad"]
+[ext_resource type="Script" path="res://Scene/map/map_dragging_state_machine.gd" id="2_qf14h"]
+[ext_resource type="PackedScene" uid="uid://cfgsf6w5bwan0" path="res://Scene/UI/room_button.tscn" id="3_g27pg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ijc7"]
+border_width_top = 20
+
+[node name="MapScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1odad")
+
+[node name="MapDraggingStateMachine" type="Node" parent="."]
+script = ExtResource("2_qf14h")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 225.0
+offset_top = 40.0
+offset_right = 855.0
+offset_bottom = 2040.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ijc7")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="20" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RoomButton" parent="PanelContainer/ScrollContainer/VBoxContainer/20" instance=ExtResource("3_g27pg")]
+layout_mode = 2
+room_type = 2
+
+[node name="19" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RoomButton" parent="PanelContainer/ScrollContainer/VBoxContainer/19" instance=ExtResource("3_g27pg")]
+layout_mode = 2
+room_type = 5
+
+[node name="RoomButton2" parent="PanelContainer/ScrollContainer/VBoxContainer/19" instance=ExtResource("3_g27pg")]
+layout_mode = 2
+room_type = 5
+
+[node name="18" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="17" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="16" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="15" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="14" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="13" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="12" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="11" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="10" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="9" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="8" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="7" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="6" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="5" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="4" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="3" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="2" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="1" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

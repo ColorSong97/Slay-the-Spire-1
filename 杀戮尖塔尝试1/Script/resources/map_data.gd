@@ -68,6 +68,9 @@ func deserialize(save_data: Dictionary) -> void:
 
 # ---------- 生成地图 ----------
 func generate_map(seed: int, room_posibility: Dictionary) -> void:
+	for i in MAX_DEPTH + 1:
+		rooms[i].clear()
+	
 	for depth in range(1, MAX_DEPTH + 1):
 		match depth:
 			1:
@@ -82,19 +85,25 @@ func generate_map(seed: int, room_posibility: Dictionary) -> void:
 			20:
 				# 生成BOSS房
 				pass
-			# 正常生成随机房间
-			pass
-	pass
+			_:
+				# 正常生成随机房间
+				pass
 
 # ---------- 测试地图 ----------
 func test_generate_map() -> void:
+	for i in MAX_DEPTH + 1:
+		rooms[i].clear()
+	
 	# 这是测试用的，生成一条直路
 	for depth in range(1, MAX_DEPTH + 1):
 		var room := MapRoomNode.new()
 		room.set_room(depth, 0, MapRoomNode.RoomType.CHEST)
 		room.next_rooms.append(0)
 		rooms[depth].append(room)
-	pass
+	
+	rooms[1][0].set_room(1, 0, MapRoomNode.RoomType.COMBAT_NORMAL)
+	rooms[19][0].set_room(19, 0, MapRoomNode.RoomType.CAMPFIRE)
+	rooms[20][0].set_room(20, 0, MapRoomNode.RoomType.COMBAT_BOSS)
 
 #region 接口
 

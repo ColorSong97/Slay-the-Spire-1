@@ -29,3 +29,16 @@ func on_game_load(save_data: Dictionary) -> void:
 	pass
 
 #endregion
+
+func start_game() -> void:
+	game_data.test_print()
+	get_tree().change_scene_to_file("res://Scene/in_game_scene.tscn")
+	await get_tree().process_frame  # 等待一帧，确保场景树构建完成
+	await get_tree().process_frame  # 等待两帧，确保场景树构建完成
+	var in_game_scene = get_node("/root/InGameScene")
+	var map_scene = get_node("/root/InGameScene/MapScene")
+	game_data._map_data.test_generate_map()
+	map_scene.create_map(game_data._map_data)
+
+func back_to_menu() -> void:
+	get_tree().change_scene_to_file("res://Scene/main_menu.tscn")

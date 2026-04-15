@@ -17,11 +17,6 @@ signal potion_3_selected
 @onready var max_hp: Label = $VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3/VBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer/MaxHp
 
 
-func _on_menu_button_pressed() -> void:
-	print_debug ("[StatueBoard] menu button pressed")
-	pause_start.emit()
-
-
 func _on_current_hp_changed(new_hp: int) -> void:
 	if current_hp:
 		current_hp.text = String.num(new_hp)
@@ -57,3 +52,18 @@ func _change_character_name(name: String) -> void:
 		print_debug("[StatueBoard] 人物名称已加载")
 	else:
 		push_error("character_name 节点未找到")
+
+
+func _on_menu_button_pressed() -> void:
+	print_debug ("[StatueBoard] menu button pressed")
+	pause_start.emit()
+
+
+func _on_check_deck_button_pressed() -> void:
+	print_debug("[StatueBoard] deck checking button pressed")
+	check_deck_pressed.emit()
+
+
+func _on_check_map_button_pressed() -> void:
+	print_debug("[StatueBoard] map checking button pressed")
+	check_map_pressed.emit()
